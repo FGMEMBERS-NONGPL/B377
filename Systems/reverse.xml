@@ -1,0 +1,194 @@
+<?xml version="1.0"?>
+
+<system name="reverse">
+
+  <channel name="propeller1">
+
+     <switch name="systems/reverse/reverse1-step1">
+          <default value="propulsion/engine[0]/constant-speed-mode"/>
+          <test value="0">
+                systems/reverse/engine1-reverse == 1
+                systems/feather/engine1-feathered eq 0
+          </test>
+          <output>propulsion/engine[0]/constant-speed-mode</output>
+     </switch>
+
+     <switch name="systems/reverse/reverse1-step2">
+          <default value="propulsion/engine[0]/blade-angle-command"/>
+          <test value="-10">
+                systems/reverse/engine1-reverse == 1
+                propulsion/engine[0]/constant-speed-mode == 0
+          </test>
+          <output>propulsion/engine[0]/blade-angle-command</output>
+     </switch>
+
+     <kinematic name="prop1 control">
+       <input>propulsion/engine[0]/blade-angle-command</input>
+       <traverse>
+         <setting>
+            <position> 0 </position>
+            <time>     0 </time>
+         </setting>
+         <setting>
+            <position> -10 </position>
+            <time>     2 </time>
+         </setting>
+       </traverse>
+       <output>propulsion/engine[0]/blade-angle</output>
+     </kinematic>
+
+     <switch name="systems/reverse/unreverse1">
+          <default value="propulsion/engine[0]/constant-speed-mode"/>
+          <test value="1">
+                systems/reverse/engine1-reverse == 0
+                systems/feather/engine1-feathered eq 0
+          </test>
+          <output>propulsion/engine[0]/constant-speed-mode</output>
+     </switch>
+
+  </channel>
+
+
+  <channel name="propeller2">
+
+     <switch name="systems/reverse/reverse2-step1">
+          <default value="propulsion/engine[1]/constant-speed-mode"/>
+          <test value="0">
+                systems/reverse/engine2-reverse == 1
+                systems/feather/engine2-feathered eq 0
+          </test>
+          <output>propulsion/engine[1]/constant-speed-mode</output>
+     </switch>
+
+     <switch name="systems/reverse/reverse2-step2">
+          <default value="propulsion/engine[1]/blade-angle-command"/>
+          <test value="-10">
+                systems/reverse/engine2-reverse == 1
+                propulsion/engine[1]/constant-speed-mode == 0
+          </test>
+          <output>propulsion/engine[1]/blade-angle-command</output>
+     </switch>
+
+     <kinematic name="prop2 control">
+       <input>propulsion/engine[1]/blade-angle-command</input>
+       <traverse>
+         <setting>
+            <position> 0 </position>
+            <time>     0 </time>
+         </setting>
+         <setting>
+            <position> -10 </position>
+            <time>     2 </time>
+         </setting>
+       </traverse>
+       <output>propulsion/engine[1]/blade-angle</output>
+     </kinematic>
+
+     <switch name="systems/reverse/unreverse2">
+          <default value="propulsion/engine[1]/constant-speed-mode"/>
+          <test value="1">
+                systems/reverse/engine2-reverse == 0
+                systems/feather/engine2-feathered eq 0
+          </test>
+          <output>propulsion/engine[1]/constant-speed-mode</output>
+     </switch>
+
+  </channel>
+
+
+  <channel name="propeller3">
+
+     <switch name="systems/reverse/reverse3-step1">
+          <default value="propulsion/engine[2]/constant-speed-mode"/>
+          <test value="0">
+                systems/reverse/engine3-reverse == 1
+                systems/feather/engine3-feathered eq 0
+          </test>
+          <output>propulsion/engine[2]/constant-speed-mode</output>
+     </switch>
+
+     <switch name="systems/reverse/reverse3-step2">
+          <default value="propulsion/engine[2]/blade-angle-command"/>
+          <test value="-10">
+                systems/reverse/engine3-reverse == 1
+                propulsion/engine[2]/constant-speed-mode == 0
+          </test>
+          <output>propulsion/engine[2]/blade-angle-command</output>
+     </switch>
+
+     <kinematic name="prop3 control">
+       <input>propulsion/engine[2]/blade-angle-command</input>
+       <traverse>
+         <setting>
+            <position> 0 </position>
+            <time>     0 </time>
+         </setting>
+         <setting>
+            <position> -10 </position>
+            <time>     2 </time>
+         </setting>
+       </traverse>
+       <output>propulsion/engine[2]/blade-angle</output>
+     </kinematic>
+
+     <switch name="systems/reverse/unreverse3">
+          <default value="propulsion/engine[2]/constant-speed-mode"/>
+          <test value="1">
+                systems/reverse/engine3-reverse == 0
+                systems/feather/engine3-feathered eq 0
+          </test>
+          <output>propulsion/engine[2]/constant-speed-mode</output>
+     </switch>
+
+  </channel>
+
+
+  <channel name="propeller4">
+
+     <switch name="systems/reverse/reverse4-step1">
+          <default value="propulsion/engine[3]/constant-speed-mode"/>
+          <test value="0">
+                systems/reverse/engine4-reverse == 1
+                systems/feather/engine4-feathered eq 0
+          </test>
+          <output>propulsion/engine[3]/constant-speed-mode</output>
+     </switch>
+
+     <switch name="systems/reverse/reverse4-step2">
+          <default value="propulsion/engine[3]/blade-angle-command"/>
+          <test value="-10">
+                systems/reverse/engine4-reverse == 1
+                propulsion/engine[3]/constant-speed-mode == 0
+          </test>
+          <output>propulsion/engine[3]/blade-angle-command</output>
+     </switch>
+
+     <kinematic name="prop4 control">
+       <input>propulsion/engine[3]/blade-angle-command</input>
+       <traverse>
+         <setting>
+            <position> 0 </position>
+            <time>     0 </time>
+         </setting>
+         <setting>
+            <position> -10 </position>
+            <time>     2 </time>
+         </setting>
+       </traverse>
+       <output>propulsion/engine[3]/blade-angle</output>
+     </kinematic>
+
+     <switch name="systems/reverse/unreverse4">
+          <default value="propulsion/engine[3]/constant-speed-mode"/>
+          <test value="1">
+                systems/reverse/engine4-reverse == 0
+                systems/feather/engine4-feathered eq 0
+          </test>
+          <output>propulsion/engine[3]/constant-speed-mode</output>
+     </switch>
+
+  </channel>
+
+
+
+</system>

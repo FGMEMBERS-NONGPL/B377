@@ -1,0 +1,319 @@
+<?xml version="1.0"?>
+
+<!--
+************************************************************************
+Boeing B-377 config file
+David Culp,  davidculp@cox.net
+License:  Creative Commons, CC-BY-NC-SA
+************************************************************************
+-->
+
+<PropertyList>
+
+ <sim>
+
+  <description>Boeing B-377 Stratocruiser</description>
+  <author>David Culp (FDM), David Culp(3D)</author>
+  <status>alpha</status>
+  <flight-model>jsb</flight-model>
+  <aero>B377-jsbsim</aero>
+
+  <startup>
+   <splash-texture>Aircraft/B377/B377-splash.png</splash-texture>
+  </startup>
+  
+  <sound>
+   <path>Aircraft/B377/Sounds/sound-config.xml</path>
+  </sound>
+
+  <virtual-cockpit archive="y">true</virtual-cockpit>
+  <allow-toggle-cockpit archive="y">false</allow-toggle-cockpit>
+
+  <panel>
+    <visibility archive="y">false</visibility>
+  </panel>
+
+  <view n="0">
+   <internal archive="y">true</internal>
+   <config>
+    <pitch-offset-deg>-5.0</pitch-offset-deg>
+    <x-offset-m archive="y">  -0.56 </x-offset-m><!-- right/left -->
+    <y-offset-m archive="y">   0.95 </y-offset-m><!-- up/down -->
+    <z-offset-m archive="y"> -11.20 </z-offset-m><!-- aft/fore -->
+   </config>
+  </view>
+
+  <model>
+   <path>Aircraft/B377/Models/B377.xml</path>
+  </model>
+
+  <chase-distance-m>-32</chase-distance-m>
+
+  <flaps>
+   <setting>0.000</setting>  <!-- Flaps UP -->
+   <setting>0.333</setting>  <!-- Flaps 1  -->
+   <setting>0.444</setting>  <!-- Flaps 2  -->
+   <setting>0.667</setting>  <!-- Flaps 3  -->
+   <setting>1.000</setting>  <!-- Flaps 4  -->
+  </flaps>
+
+  <help>
+   <key>
+    <name>Shift-Q</name>
+    <desc>Toggle Magneto for selected engine(s).</desc>
+   </key>
+   <key>
+    <name>f</name>
+    <desc>Feather/Unfeather selected engine(s).</desc>
+   </key>
+   <key>
+    <name>m</name>
+    <desc>Nose wheel steering.</desc>
+   </key>
+   <line> </line>
+   <line>Start sequence: 1-2-3-4</line>
+   <line>Start commands (Engine #1):</line>
+   <line>   "[Shift][1]" to select engine #1</line>
+   <line>   Open throttle at least 40%</line>
+   <line>   "s" (hold down)</line>
+   <line>   When engine starts: </line>
+   <line>      Release "s"</line>
+   <line>      Throttle to idle</line>
+   <line>   Repeat for other engines</line>
+   <line>When all engines are started:</line>
+   <line>   "[Shift][`]" to select all engines</line>
+   <line> </line>    
+   <line>Takeoff: Flaps 1, 56in at 2700 rpm</line>
+   <line>Climb: 45in at 2350 rpm and 175 KIAS</line>
+   <line>Cruise: 38in at 1700 rpm and 185 KIAS</line>
+   <line>Descent: 23in at 1700 rpm and 500fpm</line>
+   <line>Landing: Flaps 3, 23in at 2350 rpm and 120 KIAS</line>
+   <line> </line>
+   <line>Clickable panel.  Hit Ctrl-C to see hot spots.</line>
+   <text>
+     No notes yet.
+   </text>
+  </help>
+
+ </sim>
+
+ <controls>
+  <engines>
+   <engine n="0">
+    <ignition>1</ignition>
+    <magnetos>3</magnetos>
+    <propeller-pitch>1.0</propeller-pitch>
+    <mixture>1.0</mixture>
+   </engine>
+   <engine n="1">
+    <ignition>1</ignition>
+    <magnetos>3</magnetos>
+    <propeller-pitch>1.0</propeller-pitch>
+    <mixture>1.0</mixture>
+   </engine>
+   <engine n="2">
+    <ignition>1</ignition>
+    <magnetos>3</magnetos>
+    <propeller-pitch>1.0</propeller-pitch>
+    <mixture>1.0</mixture>
+   </engine>
+   <engine n="3">
+    <ignition>1</ignition>
+    <magnetos>3</magnetos>
+    <propeller-pitch>1.0</propeller-pitch>
+    <mixture>1.0</mixture>
+   </engine>
+  </engines>
+  <flight>
+   <flaps>0</flaps>
+   <aileron-trim>0.08</aileron-trim>
+   <elevator-trim>-0.1</elevator-trim>
+   <rudder-trim>0</rudder-trim>
+  </flight>
+  <lighting>
+   <instruments-norm>0.3</instruments-norm>
+  </lighting>
+  <gear>
+    <brake-parking type="double">1.0</brake-parking>
+  </gear>
+ </controls>
+
+
+<input>
+ <keyboard>
+
+ <key n="81">
+  <name>Shift-Q</name>
+  <desc>Magneto Selector Switch.</desc>
+  <binding>
+   <condition>
+    <property>/sim/input/selected/engine[0]</property>
+   </condition>
+   <command>property-cycle</command>
+   <property>/controls/engines/engine[0]/magnetos</property>
+   <value>0</value>
+   <value>3</value>
+  </binding>
+  <binding>
+   <condition>
+    <property>/sim/input/selected/engine[1]</property>
+   </condition>
+   <command>property-cycle</command>
+   <property>/controls/engines/engine[1]/magnetos</property>
+   <value>0</value>
+   <value>3</value>
+  </binding>
+  <binding>
+   <condition>
+    <property>/sim/input/selected/engine[2]</property>
+   </condition>
+   <command>property-cycle</command>
+   <property>/controls/engines/engine[2]/magnetos</property>
+   <value>0</value>
+   <value>3</value>
+  </binding>
+  <binding>
+   <condition>
+    <property>/sim/input/selected/engine[3]</property>
+   </condition>
+   <command>property-cycle</command>
+   <property>/controls/engines/engine[3]/magnetos</property>
+   <value>0</value>
+   <value>3</value>
+  </binding>
+ </key>
+
+
+ <key n="82">
+     <name>Shift-R</name>
+     <desc>toggle reverser</desc>
+     <binding>
+       <condition>
+         <property>/sim/input/selected/engine[0]</property>
+       </condition>
+       <command>property-cycle</command>
+       <property>fdm/jsbsim/systems/reverse/engine1-reverse</property>
+       <value>0</value>
+       <value>1</value>
+     </binding>
+     <binding>
+       <condition>
+         <property>/sim/input/selected/engine[1]</property>
+       </condition>
+       <command>property-cycle</command>
+       <property>fdm/jsbsim/systems/reverse/engine2-reverse</property>
+       <value>0</value>
+       <value>1</value>
+     </binding>
+     <binding>
+       <condition>
+         <property>/sim/input/selected/engine[2]</property>
+       </condition>
+       <command>property-cycle</command>
+       <property>fdm/jsbsim/systems/reverse/engine3-reverse</property>
+       <value>0</value>
+       <value>1</value>
+     </binding>
+     <binding>
+       <condition>
+         <property>/sim/input/selected/engine[3]</property>
+       </condition>
+       <command>property-cycle</command>
+       <property>fdm/jsbsim/systems/reverse/engine4-reverse</property>
+       <value>0</value>
+       <value>1</value>
+     </binding>
+ </key>
+
+ <key n="102">
+  <name>f</name>
+  <desc>Feather-Unfeather.</desc>
+  <binding>
+   <condition>
+    <property>/sim/input/selected/engine[0]</property>
+   </condition>
+   <command>property-cycle</command>
+   <property>fdm/jsbsim/systems/feather/engine1-feathered</property>
+   <value>0</value>
+   <value>1</value>
+  </binding>
+  <binding>
+   <condition>
+    <property>/sim/input/selected/engine[1]</property>
+   </condition>
+   <command>property-cycle</command>
+   <property>fdm/jsbsim/systems/feather/engine2-feathered</property>
+   <value>0</value>
+   <value>1</value>
+  </binding>
+  <binding>
+   <condition>
+    <property>/sim/input/selected/engine[2]</property>
+   </condition>
+   <command>property-cycle</command>
+   <property>fdm/jsbsim/systems/feather/engine3-feathered</property>
+   <value>0</value>
+   <value>1</value>
+  </binding>
+  <binding>
+   <condition>
+    <property>/sim/input/selected/engine[3]</property>
+   </condition>
+   <command>property-cycle</command>
+   <property>fdm/jsbsim/systems/feather/engine4-feathered</property>
+   <value>0</value>
+   <value>1</value>
+  </binding>
+ </key>
+
+ <key n="109">
+     <name>m</name>
+     <desc>Engage nose wheel steering</desc>
+     <binding>
+      <command>property-assign</command>
+      <property>fdm/jsbsim/systems/NWS/engaged</property>
+      <value>1</value> 
+     </binding>
+     <mod-up>
+       <binding>
+        <command>property-assign</command>
+        <property>fdm/jsbsim/systems/NWS/engaged</property>
+        <value>0</value> 
+       </binding>
+     </mod-up>
+ </key>
+
+
+ </keyboard>
+</input>
+
+<instrumentation>
+  <marker-beacon>
+    <volume type="double" archive="y">0.0</volume>
+  </marker-beacon>
+  <rdmi-mode type="int">1</rdmi-mode> <!-- 0=TAC, 1=VOR, 2=ADF -->
+</instrumentation>
+
+
+<fdm>
+  <jsbsim>
+    <systems>
+      <feather>
+        <engine1-feathered type="double">0</engine1-feathered>
+        <engine2-feathered type="double">0</engine2-feathered>
+        <engine3-feathered type="double">0</engine3-feathered>
+        <engine4-feathered type="double">0</engine4-feathered>
+      </feather>
+      <reverse>
+        <engine1-reverse type="double">0</engine1-reverse>
+        <engine2-reverse type="double">0</engine2-reverse>
+        <engine3-reverse type="double">0</engine3-reverse>
+        <engine4-reverse type="double">0</engine4-reverse>
+      </reverse>
+    </systems>
+  </jsbsim>
+</fdm>
+
+
+</PropertyList>
+

@@ -1,0 +1,128 @@
+STARTING ENGINES:
+
+The official start sequence is 3-4-2-1, but you can start in any sequence with this model.
+The magnetos are preset to "3", meaning both are on.  The prop control is preset to "1",
+meaning full speed.  Mixture is automatic.  Cowl flaps are automatic.
+
+
+1)  SHIFT-3, to select engine number 3
+2)  Set throttle to about 50%
+3)  Hold down "s" key until engine starts running
+4)  Release "s" key and set throttle to zero
+5)  Repeat the above for engines 4, 2 and 1
+6)  SHIFT-`, to select all engines
+
+
+TAXI:
+
+SHIFT-b to release parking brake. 
+"m" key engages nose wheel steering.
+Set flaps to FLAP 1 position (15 degrees)
+Max takeoff weight is 147,000 lb.
+
+
+
+TAKEOFF:
+
+Check parking brake released.
+Set power to 56 inches of manifold pressure (red mark on top gauge).
+Rotate at 140 kts.
+Positive rate of climb - gear up.
+Initial climb at 160 kts.
+At 500 ft AGL lower nose and raise flaps.
+
+
+CLIMB:
+
+Set power to 45 inches of manifold pressure (yellow mark on top gauge).
+SHIFT-n, until rpm decreases to 2350 (yellow mark on second gauge).
+Climb at 175 kts.
+Autopilot roll mode:  as required
+Autopilot pitch mode:  Hold speed of 175 kts with pitch
+
+
+
+CRUISE:
+
+Set power to 38 inches of manifold pressure (green mark on top gauge).
+SHIFT-n, until rpm reaches minimum (about 1700 rpm, green mark on second gauge).
+Let the speed run.  If above 185 kts consider climbing to next higher altitude.
+Autopilot roll mode:  as required
+Autopilot pitch mode:  Altitude Hold
+Don't use autothrottle, ever.
+
+
+
+DESCENT:
+
+Set power to 23 inches of manifold pressure (yellow mark on top gauge).
+RPM will still be 1700.
+This will give you about 500 fpm descent rate at 190 kts.
+If you need a faster descent lower the gear (if speed is < 200 kts).
+This will give you about 1300 fpm.
+Autopilot roll mode:  as required
+Autopilot pitch mode:  Hold vertical speed of 500 (gear up).
+
+
+APPROACH:
+
+Set power to a minimum of 23 inches of manifold pressure.
+Use gear/flaps to attain required descent rate.
+Final configuration is gear down, FLAPS 3 (30 degrees).
+FLAPS 4 (45 degrees) is available for short field landings.
+Set RPM to 2350 (using "n" key).  That's the yellow mark on the second gauge.
+
+
+LANDING:
+
+Max landing weight is 121,700 lb.
+Power can be reduced below 23 inches in the flare.
+Use "n" key to set props to max speed.
+SHIFT-r to put props in reverse (-10 degrees blade angle).
+SHIFT-r to come out of reverse.
+
+
+TAXI-IN:
+
+Raise flaps.
+Kill engines 1 and 4.
+
+
+PARKING:
+
+Set parking brake.
+Kill engine 2.
+Kill engine 3 if you have external power available.
+
+
+################################################################################
+
+PERFORMANCE DATA (no wind, standard day):
+
+Fuel burn:
+@ Takeoff weight of 127,500 lb, Start/taxi/takeoff/climb to:
+
+ 5000'  .............  425 lb,  10 nm,  3.5 min
+10000'  .............  735 lb,  19 nm,  6.2 min
+15000'  ............. 1100 lb,  29 nm,  9.3 min
+20000'  ............. 1510 lb,  42 nm, 12.5 min
+25000'  ............. 2035 lb,  60 nm, 17.0 min
+NOTE:  Climb above 20000' not recommended at this weight.
+
+
+Cruise fuel burn (@ 38 inches MAP, prop full coarse, 126,000 lb):
+
+20000', 210 KIAS (280 KTAS):    4800 pph  =  17.14 lbs/nm
+
+
+Cruise fuel burn (prop full course, 185 KIAS, 126,000 lb):
+
+10000', 185 KIAS (214 KTAS):    3340 pph  =  15.61 lbs/nm
+15000', 185 KIAS (232 KTAS):    3460 pph  =  14.91 lbs/nm
+20000', 185 KIAS (251 KTAS):    4100 pph  =  16.33 lbs/nm
+
+
+
+
+
+
